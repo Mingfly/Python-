@@ -1,0 +1,6 @@
+☆python版本应为3.10.4 64位
+把“wordcloud-1.8.1-cp310-cp310-win_amd64.whl”文件放在F盘或D盘
+Win（windows徽标键）+R
+运行框中输入cmd，回车运行
+在命令提示行cmd中输入pip install F:\wordcloud-1.8.1-cp310-cp310-win_amd64.whl
+等待安装完成
