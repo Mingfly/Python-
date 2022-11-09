@@ -1,0 +1,4 @@
+正确安装docx库
+pip install python-docx
+安装openpyxl包
+pip install openpyxl
