@@ -13,7 +13,7 @@ stopwords = [k.strip() for k in open('stopword_list.txt', encoding='utf8').readl
 #定义用户词典
 file_userdict = 'userdict.txt'
 jieba.load_userdict(file_userdict)
-document = Document("001.docx")
+document = Document("围城.docx")
 content = " ".join([para.text for para in document.paragraphs])
 seg_list = jieba.cut(content, cut_all=False)
 # 过滤标点符号、无意义的单个字
@@ -34,7 +34,7 @@ counter = Counter(seg_list)
 df = pd.DataFrame(list(counter.items()), columns=["word", "count"])
 df.sort_values(by="count", ascending=False, inplace=True)
 # 输出到Excel文件
-df.to_excel("科学技术研究档案管理规定-词频数据.xlsx", index=False)
+df.to_excel("围城-词频数据.xlsx", index=False)
 #添加形状配置文件
 # image1 = Image.open("test.png")
 # MASK = np.array(image1)
@@ -42,4 +42,4 @@ df.to_excel("科学技术研究档案管理规定-词频数据.xlsx", index=Fals
 wc = WordCloud(font_path="E:\\PythonLearn\\词频\\simsun.ttf",background_color="white",max_words=1000,max_font_size=100,width=1000,height=1000,repeat=False,collocations=False,mode='RGBA').generate(ciyundata)
 plt.imshow(wc)
 plt.axis("off")
-wc.to_file('科学技术研究档案管理规定-词云分析.png')
+wc.to_file('围城-词云分析.png')
